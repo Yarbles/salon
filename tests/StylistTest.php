@@ -185,6 +185,32 @@
             $this->assertEquals([$test_stylist2], Stylist::getAll());
         }
 
+        // function test_getClients()
+        // {
+        //     //Arrange
+        //     $name = "Ben";
+        //     $id = 1;
+        //     $test_stylist = new Stylist($name, $id);
+        //     $test_stylist->save();
+        //
+        //     $test_stylist_id = $test_stylist->getId();
+        //
+        //     $client_name = "Betty Sue";
+        //     $phone = "503-998-8484";
+        //     $test_client = new Client($client_name, $phone, $id, $test_stylist_id);
+        //     $test_client->save();
+        //
+        //     $client_name2 = "Evil John DeMayo";
+        //     $phone2 = "503-666-6666";
+        //     $test_client2 = new Client($client_name2, $phone2, $id, $test_stylist_id);
+        //
+        //     //Act
+        //     $result = $test_client->getClients();
+        //
+        //     //Assert
+        //     $this->assertEquals([$test_client, $test_client2], $result);
+        // }
+        //Layoutting use only; Don't use yet
 
 
     }

@@ -15,7 +15,7 @@
     $app['debug']=TRUE;
 
     $app->get("/stylists", function() use ($app) {
-        return $app['twig']->render('stylists.twig', array('stylists' =>Stylist::getAll()));
+        return $app['twig']->render('stylists.html.twig', array('stylists' =>Stylist::getAll()));
     });
 
     $app->post("/stylists", function() use ($app) {
