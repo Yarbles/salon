@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Salon Book</title>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+    </head>
+        <body>
+            <div class="container">
+                <h1>{{ stylists.getName }}</h1>
+
+                    {% if clients is not empty %}
+                        <p>Here are all the clients:</p>
+                    <ul>
+                    {% for client in clients %}
+                        <li>{{ client.getName }}</li>
+                        <li>{{ client.getPhone }}</li>
+                            {% endfor %}
+                    </ul>
+                            {% endif %}
+
+                <h4>Add a Client</h4>
+
+                <form action='/clients' method='post'>
+                        <p>
+                        <input id='stylist_id' name='stylist_id' type='hidden' value='{{ stylists.getId() }}'>
+                        <label for='name'>Restaurant Name:</label>
+                        <input id='name' name='name' type='text'>
+                        </p>
+
+                        <p>
+                        <label for='description'>Client's Phone:</label>
+                        <input id='phone' name='phone' type='text'>
+                        </p>
+
+                <button type="submit" class="btn btn-info">Add Client</button>
+            </form>
+            <p><a href='/stylists/{{ stylists.getId }}/edit'>Edit this Stylist entry</a></p>
+            <p><a href='/'>Home</a></p>
+        </div>
+    </body>
+</html>
