@@ -24,6 +24,21 @@
             //Assert
             $this->assertEquals($name, $result);
         }
+
+        function test_setName()
+        {
+            //Arrange
+            $name = "Pat";
+            $id = 1;
+            $test_stylist = new Stylist($name, $id);
+
+            //Act
+            $test_stylist->setName("Pat");
+            $result = $test_stylist->getName();
+
+            //Assert
+            $this->assertEquals("Pat", $result);
+        }
     }
 
 ?>

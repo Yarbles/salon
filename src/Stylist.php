@@ -14,6 +14,11 @@
         {
             return $this->name;
         }
+
+        function setName($new_name)
+        {
+            $this->name = (string) $new_name;
+        }
     }
 
 ?>
